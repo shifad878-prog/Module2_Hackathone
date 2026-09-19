@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,115 +8,234 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bootstrap.css">
 </head>
+
 <body>
-<!-- Login -->
-<div class="container min-vh-100 d-flex justify-content-center align-items-center py-4">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
 
-    <div class="col-12 col-sm-9 col-md-7 col-lg-5">
+```
+<div class="container">
 
-        <div class="card border-0 shadow-lg" style="border-radius: 20px;">
+    <!-- Logo -->
+    <a class="navbar-brand fw-bold fs-3" href="index.html">
+        <span style="color: #102342;">Recipe</span>
+        <span style="color: #f2675e;">Share</span>
+    </a>
 
-            <div class="card-body p-4 p-md-5">
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
 
-                <!-- Heading -->
-                <div class="text-center mb-4">
+        <span class="navbar-toggler-icon"></span>
 
-                    <div class="mb-3">
-                        <span class="d-inline-flex align-items-center justify-content-center 
-                                     bg-warning text-dark rounded-circle"
-                            style="width: 65px; height: 65px; font-size: 28px;">
-                            🔐
-                        </span>
-                    </div>
+    </button>
 
-                    <h2 class="fw-bold mb-2">
-                        Welcome Back
-                    </h2>
+    <div class="collapse navbar-collapse" id="navbarNav">
 
-                    <p class="text-muted mb-0">
-                        Login to continue to your account
-                    </p>
+        <!-- Center Navigation -->
+        <ul class="navbar-nav mx-auto">
 
-                </div>
+            <!-- Home -->
+            <li class="nav-item">
+                <a class="nav-link fw-semibold px-3" href="index.html">
+                    Home
+                </a>
+            </li>
 
+            <!-- All Recipes -->
+            <li class="nav-item">
+                <a class="nav-link fw-semibold px-3" href="recipes.html">
+                    All Recipes
+                </a>
+            </li>
 
-                <!-- Login Form -->
-                <form id="loginForm">
+            <!-- Categories -->
+            <li class="nav-item dropdown">
 
-                    <!-- Email -->
-                    <div class="mb-3">
+                <a class="nav-link dropdown-toggle fw-semibold px-3"
+                    href="#"
+                    id="categoriesDropdown"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
 
-                        <label for="email" class="form-label fw-semibold">
-                            Email Address
-                        </label>
+                    Categories
 
-                        <input 
-                            type="email"
-                            id="email"
-                            name="email"
-                            class="form-control form-control-lg"
-                            placeholder="Enter your email"
-                            required
-                            style="border-radius: 10px;"
-                        >
+                </a>
 
-                    </div>
+                <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
 
-
-                    <!-- Password -->
-                    <div class="mb-4">
-
-                        <label for="password" class="form-label fw-semibold">
-                            Password
-                        </label>
-
-                        <input 
-                            type="password"
-                            id="password"
-                            name="password"
-                            class="form-control form-control-lg"
-                            placeholder="Enter your password"
-                            required
-                            style="border-radius: 10px;"
-                        >
-
-                    </div>
-
-
-                    <!-- Login Button -->
-                    <div class="d-grid">
-
-                        <button 
-                            type="submit"
-                            id="loginBtn"
-                            class="btn btn-warning btn-lg fw-semibold"
-                            style="border-radius: 10px;"
-                        >
-                            Login
-                        </button>
-
-                    </div>
-
-                </form>
-
-
-                <!-- Signup -->
-                <div class="text-center mt-4">
-
-                    <p class="text-muted mb-2">
-                        Don't have an account?
-                        <a 
-                            href="./signup.html"
-                            class="text-warning text-decoration-none fw-semibold">
-                            Create Account
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Pakistani
                         </a>
-                    </p>
+                    </li>
 
-                    <a 
-                        href="./index.html"
-                        class="text-dark text-decoration-none small">
-                        ← Back to Home
-                    </a>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Italian
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Chinese
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Desserts
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Fast Food
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            Healthy
+                        </a>
+                    </li>
+
+                </ul>
+
+            </li>
+
+            <!-- My Recipes -->
+            <li class="nav-item">
+                <a class="nav-link fw-semibold px-3" href="my-recipes.html">
+                    My Recipes
+                </a>
+            </li>
+
+            <!-- Add Recipe -->
+            <li class="nav-item">
+                <a class="nav-link fw-semibold px-3" href="create-recipe.html">
+                    + Add Recipe
+                </a>
+            </li>
+
+        </ul>
+
+        <!-- Right Side -->
+        <div class="d-flex align-items-center gap-3">
+
+            <!-- User Name -->
+            <span id="userName" class="fw-semibold">
+                
+            </span>
+
+            <!-- Logout -->
+            <button id="logoutBtn" class="btn btn-outline-danger px-4">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+```
+
+</nav>
+
+
+    <!-- Login -->
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center py-4">
+
+        <div class="col-12 col-sm-9 col-md-7 col-lg-5">
+
+            <div class="card border-0 shadow-lg" style="border-radius: 20px;">
+
+                <div class="card-body p-4 p-md-5">
+
+                    <!-- Heading -->
+                    <div class="text-center mb-4">
+
+                        <div class="mb-3">
+                            <span class="d-inline-flex align-items-center justify-content-center 
+                                     bg-warning text-dark rounded-circle"
+                                style="width: 65px; height: 65px; font-size: 28px;">
+                                🔐
+                            </span>
+                        </div>
+
+                        <h2 class="fw-bold mb-2">
+                            Welcome Back
+                        </h2>
+
+                        <p class="text-muted mb-0">
+                            Login to continue to your account
+                        </p>
+
+                    </div>
+
+
+                    <!-- Login Form -->
+                    <form id="loginForm">
+
+                        <!-- Email -->
+                        <div class="mb-3">
+
+                            <label for="email" class="form-label fw-semibold">
+                                Email Address   
+                            </label>
+
+                            <input type="email" id="email" name="email" class="form-control form-control-lg"
+                                placeholder="Enter your email" required style="border-radius: 10px;">
+
+                        </div>
+
+
+                        <!-- Password -->
+                        <div class="mb-4">
+
+                            <label for="password" class="form-label fw-semibold">
+                                Password
+                            </label>
+
+                            <input type="password" id="password" name="password" class="form-control form-control-lg"
+                                placeholder="Enter your password" required style="border-radius: 10px;">
+
+                        </div>
+
+
+                        <!-- Login Button -->
+                        <div class="d-grid">
+
+                            <button type="submit" id="loginBtn" class="btn btn-warning btn-lg fw-semibold"
+                                style="border-radius: 10px;">
+                                Login
+                            </button>
+
+                        </div>
+
+                    </form>
+
+
+                    <!-- Signup -->
+                    <div class="text-center mt-4">
+
+                        <p class="text-muted mb-2">
+                            Don't have an account?
+                            <a href="./signup.html" class="text-warning text-decoration-none fw-semibold">
+                                Create Account
+                            </a>
+                        </p>
+
+                        <a href="./index.html" class="text-dark text-decoration-none small">
+                            ← Back to Home
+                        </a>
+
+                    </div>
 
                 </div>
 
@@ -125,9 +245,7 @@
 
     </div>
 
-</div>
-
-<!-- Bootstrap -->
+    <!-- Bootstrap -->
     <script src="./js/bootstrap.js"></script>
 
     <!-- Supabase -->
@@ -135,6 +253,7 @@
 
     <!-- Signup JS -->
     <script src="./js/login.js"></script>
-    
+
 </body>
+
 </html>

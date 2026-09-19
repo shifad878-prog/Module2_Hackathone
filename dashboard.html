@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecipeShare - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+    <!-- ================ NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+
+                <span>Recipe</span>
+                <span>Share</span>
+
+            </a>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+
+                <!-- Navigation -->
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="recipes.html">
+                            All Recipes
+                        </a>
+                    </li>
+
+
+                    <!-- Categories -->
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle fw-semibold px-3" href="#" data-bs-toggle="dropdown">
+
+                            Categories
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Pakistani
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Italian
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Chinese
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Desserts
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Fast Food
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Healthy
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="my-recipes.html">
+                            My Recipes
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="create-recipe.html">
+                            + Add Recipe
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- User Profile -->
+                <div class="dropdown">
+
+                    <button class="btn d-flex align-items-center gap-2" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+
+                        <!-- User Initial -->
+                        <div id="userInitial"
+                            class="rounded-circle bg-warning text-white d-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
+                            U
+                        </div>
+
+                        <!-- User Name -->
+                        <span id="userName" class="fw-semibold">
+                        </span>
+
+                    </button>
+
+                    <!-- Profile Dropdown -->
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+
+                        <li class="px-3 py-2">
+
+                            <div class="fw-bold" id="profileName">
+                            </div>
+
+                            <small class="text-muted" id="userEmail">
+                            </small>
+
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item" href="my-recipes.html">
+                                My Recipes
+                            </a>
+                        </li>
+
+                        <li>
+                            <button id="logoutBtn" class="dropdown-item text-danger">
+                                Logout
+                            </button>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container py-5">
+
+
+        <!-- ================= WELCOME ================= -->
+
+        <div class="welcome-section p-4 p-md-5 mb-5">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-8">
+
+                    <p class="mb-2 text-warning fw-semibold">
+                        RecipeShare Dashboard
+                    </p>
+
+                    <h1 class="fw-bold mb-3">
+                        Welcome, <span id="welcomeName">Food Lover</span> 👋
+                    </h1>
+
+                    <p class="mb-0 text-white-50">
+                        Manage your recipes, discover delicious meals,
+                        and share your favorite dishes with others.
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 text-md-end mt-4 mt-md-0">
+
+                    <a href="create-recipe.html" class="btn btn-warning btn-lg fw-semibold px-4">
+
+                        + Add Recipe
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <div class="row g-4 mb-5">
+
+
+            <!-- Total Recipes -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card stat-card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex align-items-center gap-3">
+
+                            <div class="stat-icon bg-warning">
+
+                                🍴
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-muted mb-1">
+                                    Total Recipes
+                                </p>
+
+                                <h2 id="totalRecipes" class="fw-bold mb-0">
+
+                                    0
+
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- My Recipes -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card stat-card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex align-items-center gap-3">
+
+                            <div class="stat-icon bg-light">
+
+                                📝
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-muted mb-1">
+                                    My Recipes
+                                </p>
+
+                                <h2 class="fw-bold mb-0">
+                                    <a href="my-recipes.html" class="text-decoration-none text-dark">
+
+                                        View
+
+                                    </a>
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Add Recipe -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card stat-card shadow-sm h-100">
+
+                    <div class="card-body p-4">
+
+                        <div class="d-flex align-items-center gap-3">
+
+                            <div class="stat-icon bg-light">
+
+                                ➕
+
+                            </div>
+
+                            <div>
+
+                                <p class="text-muted mb-1">
+                                    Share Recipe
+                                </p>
+
+                                <a href="create-recipe.html" class="fw-semibold text-decoration-none"
+                                    style="color:#f2675e;">
+
+                                    Create Recipe →
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= RECENT RECIPES ================= -->
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <h2 class="fw-bold mb-1">
+                    Recent Recipes
+                </h2>
+
+                <p class="text-muted mb-0">
+                    Explore the latest recipes
+                </p>
+
+            </div>
+
+
+            <a href="recipes.html" class="btn btn-outline-dark">
+
+                View All
+
+            </a>
+
+        </div>
+
+
+
+        <!-- Recipe Cards -->
+
+        <div class="row g-4">
+
+
+            <!-- Recipe 1 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card recipe-card shadow-sm h-100">
+
+                    <img src="./images/pasta.jpg" class="card-img-top recipe-img" alt="Creamy Pasta">
+
+                    <div class="card-body p-4">
+
+                        <span class="category-badge">
+                            Italian
+                        </span>
+
+                        <h5 class="fw-bold mt-3">
+                            Creamy Italian Pasta
+                        </h5>
+
+                        <p class="text-muted small">
+                            A creamy and delicious pasta recipe
+                            perfect for dinner.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <small class="text-muted">
+                                ⏱ 30 min
+                            </small>
+
+                            <a href="recipe-details.html" class="text-decoration-none fw-semibold"
+                                style="color:#f2675e;">
+
+                                View Recipe →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Recipe 2 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card recipe-card shadow-sm h-100">
+
+                    <img src="./images/samosa.jpg" class="card-img-top recipe-img" alt="Chicken Samosa">
+
+                    <div class="card-body p-4">
+
+                        <span class="category-badge">
+                            Pakistani
+                        </span>
+
+                        <h5 class="fw-bold mt-3">
+                            Crispy Chicken Samosa
+                        </h5>
+
+                        <p class="text-muted small">
+                            Crispy and flavorful chicken samosas
+                            for a perfect snack.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <small class="text-muted">
+                                ⏱ 25 min
+                            </small>
+
+                            <a href="recipe-details.html" class="text-decoration-none fw-semibold"
+                                style="color:#f2675e;">
+
+                                View Recipe →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Recipe 3 -->
+
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="card recipe-card shadow-sm h-100">
+
+                    <img src="./images/donuts.jpg" class="card-img-top recipe-img" alt="Chocolate Donuts">
+
+                    <div class="card-body p-4">
+
+                        <span class="category-badge">
+                            Desserts
+                        </span>
+
+                        <h5 class="fw-bold mt-3">
+                            Chocolate Donuts
+                        </h5>
+
+                        <p class="text-muted small">
+                            Soft and delicious chocolate donuts
+                            everyone will love.
+                        </p>
+
+                        <div class="d-flex justify-content-between align-items-center">
+
+                            <small class="text-muted">
+                                ⏱ 35 min
+                            </small>
+
+                            <a href="recipe-details.html" class="text-decoration-none fw-semibold">
+
+                                View Recipe →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Empty state for later -->
+
+        <div id="noRecipesMessage" class="text-center py-5 d-none">
+
+            <div style="font-size:50px;">
+                🍳
+            </div>
+
+            <h4 class="fw-bold mt-3">
+                No recipes yet
+            </h4>
+
+            <p class="text-muted">
+                Start sharing your first delicious recipe!
+            </p>
+
+            <a href="create-recipe.html" class="btn btn-warning fw-semibold">
+
+                + Add Your First Recipe
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="text-white py-4 mt-5">
+
+        <div class="container text-center">
+
+            <h5 class="fw-bold">
+                Recipe<span style="color:#f2675e;">Share</span>
+            </h5>
+
+            <p class="text-white-50 mb-0">
+                Discover • Cook • Share
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Dashboard JS - LAST -->
+    <script src="./js/dashboard.js"></script>
+
+
+</body>
+
+</html>
