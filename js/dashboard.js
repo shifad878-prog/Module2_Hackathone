@@ -79,7 +79,7 @@ logoutBtn.addEventListener("click", async () => {
         return;
     }
 
-    window.location.href = "./login.html";
+    window.location.href = "./create_recipe.html";
 });
 
 
