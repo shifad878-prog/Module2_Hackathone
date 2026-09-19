@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Sharing Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+
+    <body> <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+            <div class="container">
+
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold fs-3" href="index.html">
+                    <span style="color: #102342;">Recipe</span>
+                    <span style="color: #f2675e;">Share</span>
+                </a>
+
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+
+                    <!-- Center Navigation -->
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link active fw-semibold px-3" href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold px-3" href="recipes.html">
+                                All Recipes
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold px-3" href="#">
+                                Categories
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link fw-semibold px-3" href="#">
+                                About
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- RIGHT SIDE BUTTONS -->
+                    <div class="d-flex gap-2">
+
+                        <!-- Login -->
+                        <a href="login.html" class="btn btn-outline-danger px-4">
+                            Login
+                        </a>
+
+                        <!-- Signup -->
+                        <a href="signup.html" class="btn btn-primary px-4">
+                            Signup
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav> <!-- HERO SECTION  -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center min-vh-75"> <!-- Hero Content -->
+                    <div class="col-lg-6"> <span class="badge bg-warning text-dark px-3 py-2 mb-3"> 🍳 Discover • Cook •
+                            Share </span>
+                        <h1 class="display-4 fw-bold mb-4"> Delicious Recipes, <span class="text-warning"> Made With
+                                Love </span> </h1>
+                        <p class="lead text-secondary mb-4"> Discover amazing recipes from around the world, share your
+                            favorite dishes, and inspire other food lovers. </p> <!-- Search -->
+                        <div class="search-box bg-white shadow-sm p-2 rounded-3">
+                            <div class="input-group"> <input type="text" class="form-control border-0"
+                                    placeholder="Search for recipes..."> <button class="btn btn-warning px-4"> Search
+                                </button> </div>
+                        </div>
+                        <div class="mt-4"> <a href="recipes.html" class="btn btn-dark px-4 py-2 me-2"> Explore Recipes
+                            </a> <a href="signup.html" class="btn btn-outline-dark px-4 py-2"> Join Us </a> </div>
+                    </div> <!-- Hero Image -->
+                    <div class="col-lg-6 text-center mt-5 mt-lg-0">
+                        <div class="hero-image-wrapper"> <img
+                                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80"
+                                class="img-fluid hero-image" alt="Delicious food"> </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- ================= CATEGORIES ================= -->
+        <section class="py-5">
+            <div class="container">
+                <div class="text-center mb-5"> <span class="text-warning fw-semibold"> EXPLORE </span>
+                    <h2 class="fw-bold mt-2"> Browse By Category </h2>
+                    <p class="text-secondary"> Find the perfect recipe for your next meal. </p>
+                </div>
+                <div class="row g-4"> <!-- Pakistani -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="category-card text-center p-4">
+                            <div class="category-icon"> 🍛 </div>
+                            <h6 class="fw-bold mt-3"> Pakistani </h6>
+                        </div>
+                    </div> <!-- Italian -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="category-card text-center p-4">
+                            <div class="category-icon"> 🍝 </div>
+                            <h6 class="fw-bold mt-3"> Italian </h6>
+                        </div>
+                    </div> <!-- Chinese -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="category-card text-center p-4">
+                            <div class="category-icon"> 🥡 </div>
+                            <h6 class="fw-bold mt-3"> Chinese </h6>
+                        </div>
+                    </div> <!-- Desserts -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="category-card text-center p-4">
+                            <div class="category-icon"> 🍰 </div>
+                            <h6 class="fw-bold mt-3"> Desserts </h6>
+                        </div>
+                    </div> <!-- Fast Food -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="category-card text-center p-4">
+                            <div class="category-icon"> 🍔 </div>
+                            <h6 class="fw-bold mt-3"> Fast Food </h6>
+                        </div>
+                    </div> <!-- Healthy -->
+                    <div class="col-6 col-md-4 col-lg-2">
+                        <div class="category-card text-center p-4">
+                            <div class="category-icon"> 🥗 </div>
+                            <h6 class="fw-bold mt-3"> Healthy </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- ================= FEATURED RECIPES ================= -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div> <span class="text-warning fw-semibold"> FEATURED </span>
+                        <h2 class="fw-bold mt-2 mb-0"> Featured Recipes </h2>
+                    </div> <a href="recipes.html" class="text-dark text-decoration-none fw-semibold"> View All → </a>
+                </div>
+                <div class="row g-4"> <!-- Recipe 1 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card recipe-card border-0 shadow-sm h-100"> <img
+                                src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top recipe-image" alt="Pasta">
+                            <div class="card-body p-4"> <span class="badge bg-warning text-dark mb-2"> Italian </span>
+                                <h5 class="fw-bold"> Creamy Italian Pasta </h5>
+                                <p class="text-secondary"> A delicious creamy pasta recipe that's perfect for dinner.
+                                </p>
+                                <div class="d-flex justify-content-between"> <small class="text-secondary"> ⏱ 30 min
+                                    </small> <small class="text-secondary"> 👤 Shifa </small> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Recipe 2 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card recipe-card border-0 shadow-sm h-100"> <img
+                                src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top recipe-image" alt="Samosa">
+                            <div class="card-body p-4"> <span class="badge bg-warning text-dark mb-2"> Pakistani </span>
+                                <h5 class="fw-bold"> Crispy Chicken Samosa </h5>
+                                <p class="text-secondary"> Crispy and flavorful samosas filled with delicious chicken.
+                                </p>
+                                <div class="d-flex justify-content-between"> <small class="text-secondary"> ⏱ 45 min
+                                    </small> <small class="text-secondary"> 👤 Ahmed </small> </div>
+                            </div>
+                        </div>
+                    </div> <!-- Recipe 3 -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card recipe-card border-0 shadow-sm h-100"> <img
+                                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+                                class="card-img-top recipe-image" alt="Dessert">
+                            <div class="card-body p-4"> <span class="badge bg-warning text-dark mb-2"> Desserts </span>
+                                <h5 class="fw-bold"> Chocolate Donuts </h5>
+                                <p class="text-secondary"> Soft and delicious chocolate donuts for dessert lovers. </p>
+                                <div class="d-flex justify-content-between"> <small class="text-secondary"> ⏱ 25 min
+                                    </small> <small class="text-secondary"> 👤 Sara </small> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> <!-- ================= CTA ================= -->
+        <section class="py-5">
+            <div class="container">
+                <div class="cta-section text-center p-5 rounded-4">
+                    <h2 class="fw-bold"> Have a Delicious Recipe? </h2>
+                    <p class="text-secondary mt-3"> Share your favorite recipe with our community and inspire other food
+                        lovers. </p> <a href="create-recipe.html" class="btn btn-warning px-4 py-2 mt-2"> Share Your
+                        Recipe </a>
+                </div>
+            </div>
+        </section> <!-- ================= FOOTER ================= -->
+        <footer class="bg-dark text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <h5 class="text-warning"> RecipeShare </h5>
+                        <p class="text-secondary mb-0"> Discover, cook and share delicious recipes. </p>
+                    </div>
+                    <div class="col-md-6 text-md-end mt-3 mt-md-0"> <a href="index.html"
+                            class="text-white text-decoration-none me-3"> Home </a> <a href="recipes.html"
+                            class="text-white text-decoration-none me-3"> Recipes </a> <a href="login.html"
+                            class="text-white text-decoration-none"> Login </a> </div>
+                </div>
+                <hr class="border-secondary">
+                <p class="text-center text-secondary mb-0"> © 2026 RecipeShare. All Rights Reserved. </p>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+        <!-- javascript  -->
+        <script src="./js/app.js"></script>
+        <!-- bootstrap  -->
+        <script src="./js/bootstrap.js"></script>
+        <!-- supabase  -->
+        <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+        <!-- sweet alert  -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </body>
+
+</html>

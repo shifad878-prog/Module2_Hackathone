@@ -1,0 +1,141 @@
+
+/* ================= GENERAL ================= */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+
+/* ================= HERO ================= */
+
+.hero-section {
+    background: #fffaf0;
+    padding: 60px 0;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.hero-image-wrapper {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    max-width: 550px;
+}
+
+.search-box .form-control {
+    box-shadow: none;
+}
+
+.search-box .form-control:focus {
+    box-shadow: none;
+}
+
+
+/* ================= CATEGORY ================= */
+
+.category-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #eeeeee;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.category-icon {
+    font-size: 38px;
+}
+
+
+/* ================= RECIPE CARD ================= */
+
+.recipe-card {
+    overflow: hidden;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.recipe-image {
+    height: 230px;
+    object-fit: cover;
+}
+
+
+/* ================= CTA ================= */
+
+.cta-section {
+    background-color: #fff8e6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar .nav-link {
+    font-weight: 500;
+    margin: 0 5px;
+}
+
+.navbar .nav-link:hover {
+    color: #f0ad00;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .hero-section {
+        padding: 30px 0;
+    }
+
+    .hero-image {
+        height: 280px;
+        border-radius: 20px;
+    }
+
+    .display-4 {
+        font-size: 2.2rem;
+    }
+
+    .category-icon {
+        font-size: 30px;
+    }
+
+}

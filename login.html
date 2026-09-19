@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+<!-- Login -->
+<div class="container min-vh-100 d-flex justify-content-center align-items-center py-4">
+
+    <div class="col-12 col-sm-9 col-md-7 col-lg-5">
+
+        <div class="card border-0 shadow-lg" style="border-radius: 20px;">
+
+            <div class="card-body p-4 p-md-5">
+
+                <!-- Heading -->
+                <div class="text-center mb-4">
+
+                    <div class="mb-3">
+                        <span class="d-inline-flex align-items-center justify-content-center 
+                                     bg-warning text-dark rounded-circle"
+                            style="width: 65px; height: 65px; font-size: 28px;">
+                            🔐
+                        </span>
+                    </div>
+
+                    <h2 class="fw-bold mb-2">
+                        Welcome Back
+                    </h2>
+
+                    <p class="text-muted mb-0">
+                        Login to continue to your account
+                    </p>
+
+                </div>
+
+
+                <!-- Login Form -->
+                <form id="loginForm">
+
+                    <!-- Email -->
+                    <div class="mb-3">
+
+                        <label for="email" class="form-label fw-semibold">
+                            Email Address
+                        </label>
+
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-control form-control-lg"
+                            placeholder="Enter your email"
+                            required
+                            style="border-radius: 10px;"
+                        >
+
+                    </div>
+
+
+                    <!-- Password -->
+                    <div class="mb-4">
+
+                        <label for="password" class="form-label fw-semibold">
+                            Password
+                        </label>
+
+                        <input 
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="form-control form-control-lg"
+                            placeholder="Enter your password"
+                            required
+                            style="border-radius: 10px;"
+                        >
+
+                    </div>
+
+
+                    <!-- Login Button -->
+                    <div class="d-grid">
+
+                        <button 
+                            type="submit"
+                            id="loginBtn"
+                            class="btn btn-warning btn-lg fw-semibold"
+                            style="border-radius: 10px;"
+                        >
+                            Login
+                        </button>
+
+                    </div>
+
+                </form>
+
+
+                <!-- Signup -->
+                <div class="text-center mt-4">
+
+                    <p class="text-muted mb-2">
+                        Don't have an account?
+                        <a 
+                            href="./signup.html"
+                            class="text-warning text-decoration-none fw-semibold">
+                            Create Account
+                        </a>
+                    </p>
+
+                    <a 
+                        href="./index.html"
+                        class="text-dark text-decoration-none small">
+                        ← Back to Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap -->
+    <script src="./js/bootstrap.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- Signup JS -->
+    <script src="./js/login.js"></script>
+    
+</body>
+</html>
