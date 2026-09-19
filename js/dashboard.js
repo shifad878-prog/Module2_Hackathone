@@ -69,7 +69,6 @@ async function getUser() {
 }
 
 
-// Logout
 logoutBtn.addEventListener("click", async () => {
 
     const { error } = await client.auth.signOut();
@@ -79,7 +78,7 @@ logoutBtn.addEventListener("click", async () => {
         return;
     }
 
-    window.location.href = "./create_recipe.html";
+    window.location.href = "./login.html";
 });
 
 

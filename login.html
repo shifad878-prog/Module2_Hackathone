@@ -11,141 +11,123 @@
 
 <body>
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
 
-```
-<div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold fs-3" href="index.html">
+                <span style="color: #102342;">Recipe</span>
+                <span style="color: #f2675e;">Share</span>
+            </a>
 
-    <!-- Logo -->
-    <a class="navbar-brand fw-bold fs-3" href="index.html">
-        <span style="color: #102342;">Recipe</span>
-        <span style="color: #f2675e;">Share</span>
-    </a>
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 
-    <!-- Mobile Toggle -->
-    <button class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
 
-        <span class="navbar-toggler-icon"></span>
+            </button>
 
-    </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-    <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Center Navigation -->
+                <ul class="navbar-nav mx-auto">
 
-        <!-- Center Navigation -->
-        <ul class="navbar-nav mx-auto">
-
-            <!-- Home -->
-            <li class="nav-item">
-                <a class="nav-link fw-semibold px-3" href="index.html">
-                    Home
-                </a>
-            </li>
-
-            <!-- All Recipes -->
-            <li class="nav-item">
-                <a class="nav-link fw-semibold px-3" href="recipes.html">
-                    All Recipes
-                </a>
-            </li>
-
-            <!-- Categories -->
-            <li class="nav-item dropdown">
-
-                <a class="nav-link dropdown-toggle fw-semibold px-3"
-                    href="#"
-                    id="categoriesDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false">
-
-                    Categories
-
-                </a>
-
-                <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
-
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Pakistani
+                    <!-- Home -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="index.html">
+                            Home
                         </a>
                     </li>
 
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Italian
+                    <!-- All Recipes -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="recipes.html">
+                            All Recipes
                         </a>
                     </li>
 
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Chinese
+                    <!-- Categories -->
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle fw-semibold px-3" href="#" id="categoriesDropdown"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            Categories
+
+                        </a>
+
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Pakistani
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Italian
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Chinese
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Desserts
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Fast Food
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Healthy
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <!-- My Recipes -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="my-recipes.html">
+                            My Recipes
                         </a>
                     </li>
 
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Desserts
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Fast Food
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="dropdown-item" href="#">
-                            Healthy
+                    <!-- Add Recipe -->
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold px-3" href="create-recipe.html">
+                            + Add Recipe
                         </a>
                     </li>
 
                 </ul>
 
-            </li>
+                <!-- Right Side -->
+                <div class="d-flex align-items-center gap-3">
 
-            <!-- My Recipes -->
-            <li class="nav-item">
-                <a class="nav-link fw-semibold px-3" href="my-recipes.html">
-                    My Recipes
-                </a>
-            </li>
+                    <!-- User Name -->
+                    <span id="userName" class="fw-semibold">
 
-            <!-- Add Recipe -->
-            <li class="nav-item">
-                <a class="nav-link fw-semibold px-3" href="create-recipe.html">
-                    + Add Recipe
-                </a>
-            </li>
+                    </span>
 
-        </ul>
+                </div>
 
-        <!-- Right Side -->
-        <div class="d-flex align-items-center gap-3">
-
-            <!-- User Name -->
-            <span id="userName" class="fw-semibold">
-                
-            </span>
-
-            <!-- Logout -->
-            <button id="logoutBtn" class="btn btn-outline-danger px-4">
-                Logout
-            </button>
+            </div>
 
         </div>
-
-    </div>
-
-</div>
-```
-
-</nav>
+    </nav>
 
 
     <!-- Login -->
@@ -186,7 +168,7 @@
                         <div class="mb-3">
 
                             <label for="email" class="form-label fw-semibold">
-                                Email Address   
+                                Email Address
                             </label>
 
                             <input type="email" id="email" name="email" class="form-control form-control-lg"

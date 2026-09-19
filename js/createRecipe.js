@@ -172,6 +172,10 @@ recipeForm.addEventListener("submit", async (event) => {
         icon: "success",
         title: "Recipe Saved!",
         text: "Your recipe has been created successfully."
+    }).then(() => {
+
+        window.location.href = "./myRecipe.html";
+
     });
 
 
