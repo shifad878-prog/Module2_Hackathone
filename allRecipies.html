@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Recipies</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand fw-bold fs-3 text-warning" href="index.html">
+                Recipe<span class="text-dark">Share</span>
+            </a>
+
+
+            <!-- Mobile Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+
+                <!-- Links -->
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="index.html">
+
+                            Home
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="./allRecipies.html">
+
+                            All Recipes
+
+                        </a>
+
+                    </li>
+
+
+                    <!-- Categories -->
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+
+                            Categories
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Pakistani
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Italian
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Chinese
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Desserts
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Fast Food
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Healthy
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="./myRecipe.html">
+
+                            My Recipes
+
+                        </a>
+
+                    </li>
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active fw-semibold" href="./createRecipe.html">
+
+                            + Add Recipe
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <!-- Right Side -->
+
+                <div class="d-flex gap-2 align-items-center">
+
+                    <span id="userName" class="fw-semibold">
+                    </span>
+
+                    <button id="logoutBtn" class="btn btn-outline-danger">
+
+                        Logout
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </nav>
+    <main class="container py-5">
+
+        <div class="mb-4">
+            <h1 class="fw-bold">
+                All Recipes
+            </h1>
+
+            <p class="text-muted">
+                Explore delicious recipes shared by our community.
+            </p>
+        </div>
+
+        <div id="allRecipesContainer" class="row g-4">
+        </div>
+
+    </main>
+
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.js"></script>
+
+    <!-- Supabase -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <!-- Signup JS -->
+    <script src="./js/allRecipe.js"></script>
+
+</body>
+
+</html>

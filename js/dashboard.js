@@ -66,6 +66,10 @@ async function getUser() {
     // Show first letter
     userInitial.innerHTML =
         userData.fullName.charAt(0).toUpperCase();
+
+
+    // Show signup user's name in Welcome section
+    welcomeName.innerHTML = userData.fullName;
 }
 
 

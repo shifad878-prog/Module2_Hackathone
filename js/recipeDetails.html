@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recipe Details</title>
+    <link rel="stylesheet" href="../bootstrap.css">>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold fs-3 text-warning" href="index.html">
+                Recipe<span class="text-dark">Share</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./allRecipies.html">
+                            All Recipes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./myRecipe.html">
+                            My Recipes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./createRecipe.html">
+                            + Add Recipe
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex gap-2 align-items-center">
+
+                    <span id="userName" class="fw-semibold"></span>
+
+                    <button id="logoutBtn" class="btn btn-outline-danger">
+                        Logout
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- RECIPE DETAILS -->
+
+    <main class="container py-5">
+
+        <div id="recipeDetails">
+
+            <!-- JavaScript se recipe yahan ayegi -->
+
+        </div>
+
+    </main>
+
+
+    <!-- JS -->
+
+    <script src="../js/bootstrap.js"></script>
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <script src="../js/supabase.js"></script>
+
+    <script src="../js/recipeDetails.js"></script>
+</body>
+
+</html>
