@@ -439,3 +439,88 @@ window.deleteRecipe = async function (id) {
     });
 
 };
+
+// view recipe 
+window.viewRecipe = async function (id) {
+
+    // Recipe database se fetch karna
+    const { data: recipe, error } = await client
+        .from("Recipe_information")
+        .select("*")
+        .eq("id", id)
+        .single();
+
+    console.log("View Recipe:", recipe);
+    console.log("View Error:", error);
+
+    // Agar error aaye
+    if (error) {
+
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: error.message
+        });
+
+        return;
+    }
+
+    // Recipe details show karna
+    Swal.fire({
+
+        title: recipe.Recipe_Title,
+
+        html: `
+            <img 
+                src="${recipe.image_URL || 'https://via.placeholder.com/600x350?text=Recipe'}"
+                style="
+                    width:100%;
+                    height:220px;
+                    object-fit:cover;
+                    border-radius:10px;
+                    margin-bottom:15px;
+                "
+            >
+
+            <p>
+                <strong>Category:</strong>
+                ${recipe.Category}
+            </p>
+
+            <p>
+                <strong>Cooking Time:</strong>
+                ${recipe.Cooking_Time} minutes
+            </p>
+
+            <hr>
+
+            <h5>Description</h5>
+
+            <p>
+                ${recipe.Description}
+            </p>
+
+            <hr>
+
+            <h5>Ingredients</h5>
+
+            <p>
+                ${recipe.Ingredients}
+            </p>
+
+            <hr>
+
+            <h5>Instructions</h5>
+
+            <p>
+                ${recipe.Instructions}
+            </p>
+        `,
+
+        confirmButtonText: "Close",
+
+        width: "700px"
+
+    });
+
+};
